@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $logo = ($_SERVER['SERVER_NAME']);
 $ips = $_SERVER['REMOTE_ADDR'];
 $ipl = "http://ipgeobase.ru/?address=";
@@ -24,10 +24,10 @@ $kompania = $output['utm_campaign']; // название компании
 
 mail($to, $subject, $message, $headers);
 
- $to  = '375296036822@sms.velcom.by'; 
+// $to  = '375296036822@sms.velcom.by'; 
   $to2  = 'vitaminiby@ya.ru'; 
-   $to3  = 'lapanjela@mail.ru';
-$subject = 'заявка с  - '.strip_tags($referer2).' - '.$phone.'';
+   $to3  = 'vidokon@mail.ru';
+$subject = 'пвх-окна.назаказ - '.$phone.'';
 $from = "$name";
 // текст письма
 $message = '
@@ -84,11 +84,11 @@ $message2 = '
 
 $headers .= 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-$headers .= "From: lapanjela@mail.ru";
+$headers .= "From: vitaminiby@ya.ru";
 mail($to2, $subject, $message2, $headers);
 mail($to, $subject, $message, $headers);
 mail($to3, $subject, $message, $headers);
-$URL="request.html";
+$URL="index_otpr.html";
 header ("Location: $URL");
 
 	?>

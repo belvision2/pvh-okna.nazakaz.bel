@@ -74,9 +74,10 @@ jQuery(function ($) {
             'validateFields': {
                 'client_name': 'Укажите Ваше имя',
                 'client_phone': 'Укажите Ваш телефон',
-                'client_mail': 'Укажите Ваш e-mail'
+             
             },
             'sendSuccess': function (res) {
+                document.location.href="http://oknoff.by/index_otpr.html";
                 //yaCounter.reachGoal('target' + res.id);
                 //ga('send', 'event', res.gcode, res.gcode);
             }
@@ -159,27 +160,3 @@ jQuery(function ($) {
 
 });
 
-ymaps.ready(function () {
-
-    myMap = new ymaps.Map("map", {
-        center: [55.758351, 37.631801],
-        zoom: 16
-    });
-
-    myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier']);
-
-    myMap.controls.add('mapTools');
-    myMap.controls.add('typeSelector');
-    myMap.controls.add('zoomControl');
-
-    var myPlacemark = new ymaps.Placemark(
-        [55.758351, 37.631801], {},
-        {
-            iconImageHref: './images/map-icon.png',
-            iconImageSize: [81, 135],
-            iconImageOffset: [-40, -70]
-        }
-    );
-
-    myMap.geoObjects.add(myPlacemark);
-});
